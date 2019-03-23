@@ -40,19 +40,20 @@ console.log(textNodes)
 
 for (let i in textNodes){
   var min=0; 
-  var max=10;  
+  var max=2;  
   var random =Math.floor(Math.random() * (+max - +min)) + +min; 
   // document.write("Random Number Generated : " + random ); 
   if (random == 0){
   	newText = textNodes[i].nodeValue
-  	newText = textNodes[i].nodeValue.replace(/is a .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/was a .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/is an .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/was an .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/could be an .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/could be a .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/should be an .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
-  	newText = textNodes[i].nodeValue.replace(/should be a .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
+  	newText = newText.replace(/is a .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
+  	newText = newText.replace(/was a .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
+  	newText = newText.replace(/is an .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
+  	newText = newText.replace(/was an .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
+  	newText = newText.replace(/could be an .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
+  	newText = newText.replace(/could be a .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
+  	newText = newText.replace(/should be an .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
+  	newText = newText.replace(/should be a .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
+  	console.log(newText)
     textNodes[i].nodeValue = newText
   }
   
