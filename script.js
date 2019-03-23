@@ -43,8 +43,17 @@ for (let i in textNodes){
   var max=10;  
   var random =Math.floor(Math.random() * (+max - +min)) + +min; 
   // document.write("Random Number Generated : " + random ); 
-  if (random == 5){
-    textNodes[i].nodeValue = "ABSOLUTE ORANGUTAN"
+  if (random == 0){
+  	newText = textNodes[i].nodeValue
+  	newText = textNodes[i].nodeValue.replace(/is a .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/was a .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/is an .*[\.,:,!,;,?]/i, "is an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/was an .*[\.,:,!,;,?]/i, "was an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/could be an .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/could be a .*[\.,:,!,;,?]/i, "could be an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/should be an .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
+  	newText = textNodes[i].nodeValue.replace(/should be a .*[\.,:,!,;,?]/i, "should be an absolute orangutan. ")
+    textNodes[i].nodeValue = newText
   }
   
 
