@@ -39,7 +39,14 @@ textNodes = getTextNodesIn(document.getElementsByTagName("BODY")[0], null);
 console.log(textNodes)
 
 for (let i in textNodes){
-	textNodes[i].nodeValue = "ABSOLUTE ORANGUTAN"
+  var min=0; 
+  var max=10;  
+  var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+  // document.write("Random Number Generated : " + random ); 
+  if (random == 5){
+    textNodes[i].nodeValue = "ABSOLUTE ORANGUTAN"
+  }
+  
 
 	console.log(textNodes[i].nodeValue)
 }
